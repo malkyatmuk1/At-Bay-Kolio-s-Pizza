@@ -12,7 +12,7 @@ public class Pizza implements Product {
     public Pizza(String name, sizePizza size, double price, double salePrice,
     		int quantity, String description) {
 		this.name=name;
-		this.size=size;
+		this.size=size;;
 		this.price=price;
 		this.salePrice=salePrice;
 		this.quantity=quantity;
@@ -62,8 +62,25 @@ public class Pizza implements Product {
 
 	@Override
 	public String getName() {
-		// TODO Auto-generated method stub
 		return this.name;
+	}
+	public sizePizza getSize() {
+		return size;
+	}
+	public void setSize(sizePizza size) {
+		this.size = size;
+	}
+	public double getSalePrice() {
+		return salePrice;
+	}
+	public void setSalePrice(double salePrice) {
+		this.salePrice = salePrice;
+	}
+	public String getDescription() {
+		return description;
+	}
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	
 }

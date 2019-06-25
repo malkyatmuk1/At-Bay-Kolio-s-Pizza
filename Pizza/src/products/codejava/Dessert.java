@@ -4,11 +4,18 @@ package products.codejava;
 
 public class Dessert implements Product {
 
-    private double price,priceForSell;
+    private double price,salePrice;
     private String name,description;
     private int quantity;
     
     
+    public Dessert(String name,double price,double salePrice,int quantity,String description) {
+		this.name=name;
+		this.price=price;
+		this.salePrice=salePrice;
+		this.quantity=quantity;
+		this.description=description;
+	}
 	@Override
 	public double getPrice() {
 		return this.price;
@@ -55,6 +62,22 @@ public class Dessert implements Product {
 	public String getName() {
 		return this.name;
 		
+	}
+
+	public double getSalePrice() {
+		return salePrice;
+	}
+
+	public void setSalePrice(double salePrice) {
+		this.salePrice = salePrice;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 

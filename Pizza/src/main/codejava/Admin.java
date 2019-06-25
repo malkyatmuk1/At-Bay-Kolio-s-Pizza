@@ -7,6 +7,7 @@ public class Admin {
 		// TODO Auto-generated constructor stub
 	}
 	public void addProduct() {
+	
 		
 	}
 	public void changeProduct () {
