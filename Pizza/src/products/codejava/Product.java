@@ -6,7 +6,7 @@ public interface Product {
 	public String stringBuilder();
 	public void setPrice(double price) ;
 	public void setQuantity(int quantity);
-	public void buy(double price, int quantity, String name, String description);
+	public void buy();
 	public void sale(int quantity, String name);
 	public void wastage();
 	public String getName();

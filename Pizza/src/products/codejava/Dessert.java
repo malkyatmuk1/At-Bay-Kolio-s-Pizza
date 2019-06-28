@@ -1,6 +1,6 @@
 package products.codejava;
 
-
+import main.codejava.Global;
 
 public class Dessert implements Product {
 
@@ -42,8 +42,8 @@ public class Dessert implements Product {
 	}
 
 	@Override
-	public void buy(double price, int quantity, String name, String description) {
-				
+	public void buy() {
+		Global.moneyBuy+=this.price*this.quantity;
 	}
 
 	@Override

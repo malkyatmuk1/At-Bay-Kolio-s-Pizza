@@ -1,5 +1,6 @@
 package products.codejava;
 
+import main.codejava.Global;
 import main.codejava.sizeDrink;
 import main.codejava.sizePizza;
 
@@ -61,8 +62,8 @@ public class Drink implements Product {
 	}
 
 	@Override
-	public void buy(double price, int quantity, String name, String description) {
-		// TODO Auto-generated method stub
+	public void buy() {
+		Global.moneyBuy+=this.price*this.quantity;
 		
 	}
 
@@ -73,5 +74,5 @@ public class Drink implements Product {
 		// TODO Auto-generated method stub
 		
 	}
-
+	
 }
