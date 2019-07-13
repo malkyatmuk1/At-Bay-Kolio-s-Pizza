@@ -2,6 +2,8 @@ package main.codejava;
 
 import java.sql.*;
 
+import products.codejava.Product;
+
 public class SQLiteJDBC {
 	public static void main( String args[] ) {
 		connectDB();
@@ -61,16 +63,15 @@ public class SQLiteJDBC {
 	        }
 	        System.out.println("Opened database successfully");
 	  }
-	public static void insertProduct(String name, String description,
-			double priceBuy, double priceSale, int quatntity, String productType)
+	public static void insertProduct(Product product)
 	{
 	     String sql = "INSERT INTO PRODUCTS(name,description, priceBuy, priceSale, quantity, Type) VALUES(?1,?2,?3,?4,?5,?6)";
 	     
 	        try (Connection conn = DriverManager.getConnection("jdbc:sqlite:product.sqlite");
 	                PreparedStatement pstmt = conn.prepareStatement(sql)) {
-	            pstmt.setString(1, name);
-	            pstmt.setString(2, description);
-	            pstmt.setDouble(3,priceBuy);
+	            pstmt.setString(1, product.name);
+	            pstmt.setString(2, product.get);
+	            pstmt.setDouble(3,product.getPrice());
 	            pstmt.setDouble(4,priceSale);
 	            pstmt.setInt(5, quatntity);
 	            pstmt.setString(6, productType);
